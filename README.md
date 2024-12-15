@@ -116,4 +116,29 @@ Visualization methods were used to gain insights on activation, gradient, weight
   - The update-to-data ratio for parameters should stabilize around `10^-3` (on a log scale):
     - Ensures meaningful updates without destabilizing parameter values.
 
+The results at the end of part 3 are: 
+
+```
+carmahfari.
+harlin.
+mili.
+tatyah.
+cassie.
+rah.
+bradheryncia.
+qui.
+nellara.
+chaiivia.
+legyn.
+ham.
+joce.
+quintis.
+lilah.
+jadilyn.
+jero.
+dearyn.
+kai.
+eveiluan.
+```
+
 ## Part 4
