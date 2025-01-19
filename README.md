@@ -142,3 +142,38 @@ eveiluan.
 ```
 
 ## Part 4
+
+Instead of doing something new, we focus on understanding the fundamentals of backpropagation in this part. We do this by manually backpropagating through each layer--cross entropy loss, 2nd linear layer, tanh, batchnorm, 1st linear layer and the embedding table without using PyTorch autograd's `loss.backward()`. We compare our result with for each output with PyTorch's results and find them to be in agreement. The result at the end of part 4 remains the same as part 3. 
+
+## Part 5 
+
+In the final part of the project, we transition from a simple multi-layer perceptron model with a single hidden layer to a more advanced hierarchical architecture inspired by the [WaveNet paper](https://arxiv.org/abs/1609.03499). Instead of directly squashing all the context information in one step by flattening sequence of input characters into a single dimension, which led to a loss of contextual information between characters, we processes longer sequences through progressive fusion. The architecture starts by embedding input characters, processes pairs of embeddings through deeper layers and fuses information hierarchically in a tree-like structure (as shown below). This avoids the early squashing of information and enhances the model’s ability to capture context. We also increase the context size from 3 to 8 for better performance. 
+
+![fusion](images/fusion.png) 
+
+We also fixed a bug in batch normalization which incorrectly shaped the tensors for 3 dimensional inputs to account for the fusion process. When we started, our loss in part 1 was 2.48 and at the end of part 5 is 1.98. While reducing the loss was not the main aim of the project, it was to understand how something like a GPT works, it is certainly interesting to see. 
+
+The result at the end of this project are the following name-like sounding names: 
+
+```
+apoljoe.
+otta.
+heagon.
+javye.
+meela.
+waiden.
+airahro.
+claris.
+brennen.
+blayta.
+arah.
+astacia.
+annayveon.
+zayely.
+cassedin.
+letmit.
+dawdeng.
+gian.
+nataliya.
+carmela.
+```
